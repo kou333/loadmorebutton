@@ -1,0 +1,82 @@
+.load-more-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Center the content horizontally */
+    margin: 20px auto;   /* Add spacing around the container */
+    width: 100%;         /* Take full width */
+    max-width: 1200px;   /* Limit the maximum width */
+    padding: 0 15px;     /* Add padding for small screens */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between items */
+    width: 100%; /* Use full width of the parent container */
+}
+
+.product {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border for separation */
+    border-radius: 8px; /* Smooth edges */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff; /* White background for clarity */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside the product */
+    gap: 10px;
+    text-align: center; /* Align text centrally */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.product img {
+    width: 100%; /* Make image responsive */
+    max-width: 150px; /* Set maximum width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image fits its container */
+    border-radius: 4px; /* Rounded corners for images */
+}
+
+.product p {
+    margin: 0;
+    font-size: 14px;
+    color: #333; /* Darker text for readability */
+}
+
+.button-container {
+    margin-top: 20px;
+    text-align: center; /* Center the button */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Primary blue */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.message-container {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
